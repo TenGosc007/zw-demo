@@ -23,7 +23,7 @@ export async function generateMetadata({
     openGraph: {
       images: post?.image || "",
       type: "website",
-      title: "Zaplanuj Wypad",
+      title: "ZaplanujWypad | " + post?.title,
       siteName: "zaplanujwypad.pl",
       locale,
     },
