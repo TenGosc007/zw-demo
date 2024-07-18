@@ -1,4 +1,5 @@
 import parse from "html-react-parser";
+import { Metadata } from "next";
 import React from "react";
 
 import { getPost } from "@/api/posts";
@@ -11,6 +12,33 @@ import styles from "./post.module.scss";
 type PostPageProps = {
   params: { id: number; locale: string };
 };
+
+export async function generateMetadata({
+  params: { id, locale },
+}: PostPageProps): Promise<Metadata> {
+  const post = await getPost(id);
+  const desc = parse(`<style>
+                    #post h1  ${innerStyles.h1}
+                    #post h2  ${innerStyles.h2}
+                    #post p   ${innerStyles.p}
+                    #post strong  ${innerStyles.strong}
+                    #post img   ${innerStyles.img}
+                </style>
+                <div id="post">${post?.content}</div>
+                `);
+
+  return {
+    title: "ZaplanujWypad | " + post?.title,
+    openGraph: {
+      images: post?.image || "",
+      type: "website",
+      title: "Zaplanuj Wypad",
+      siteName: "zaplanujwypad.pl",
+      locale,
+    },
+    description: desc.toString().substring(0, 60),
+  };
+}
 
 export default async function PostPage({ params: { id } }: PostPageProps) {
   const post = await getPost(id);
