@@ -1,0 +1,10 @@
+@import "@/styles/theme.scss";
+
+.container {
+  max-width: $container-sm;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+}

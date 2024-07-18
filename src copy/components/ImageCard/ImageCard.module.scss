@@ -1,0 +1,46 @@
+@import "@/styles/theme.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imgContainer {
+  width: 24rem;
+  height: 24rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+
+  @media screen and (max-width: $break-md) {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+
+  @media screen and (max-width: $break-md) {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+.imgMedia {
+  width: 2.5rem;
+  object-fit: contain;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}

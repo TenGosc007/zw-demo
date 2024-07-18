@@ -1,0 +1,13 @@
+.slider {
+  overflow: hidden;
+  margin-top: 3rem;
+
+  .container {
+    display: flex;
+  }
+
+  .slide {
+    width: 100%;
+    margin: 0 1.5rem;
+  }
+}

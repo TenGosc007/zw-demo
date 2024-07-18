@@ -1,0 +1,24 @@
+@import "@/styles/theme.scss";
+
+.container {
+  background: $button-background-primary;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 0.75em;
+  transition: 0.3s;
+  box-shadow: $button-shadow;
+
+  &:focus-visible,
+  &:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+  }
+  &:active {
+    transform: translate(1px, 1px);
+  }
+
+  @media screen and (max-width: $break-md) {
+    flex: 1;
+  }
+}

@@ -1,0 +1,12 @@
+@import "@/styles/theme.scss";
+
+.secitionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  margin: 5rem 0;
+
+  @media screen and (max-width: $break-md) {
+    gap: 5rem;
+  }
+}

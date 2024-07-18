@@ -1,0 +1,46 @@
+@import "./theme.scss";
+@import "./normalize.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: min(calc(10px + 1vmin), 16px);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: min(calc(10px + 1vmin), 16px);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  display: inline-block;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: $link-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

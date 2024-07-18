@@ -1,0 +1,10 @@
+@import "@/styles/theme.scss";
+
+.container {
+  background: $tag-background;
+  border-radius: 6px;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
