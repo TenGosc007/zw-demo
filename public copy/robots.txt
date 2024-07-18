@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.zaplanujwypad.pl/pl
-
-# Sitemaps
-Sitemap: https://www.zaplanujwypad.pl/pl/sitemap.xml
