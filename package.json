@@ -1,0 +1,42 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "i18nexus pull && next dev",
+    "build": "export NEXT_SHARP_PATH=/tmp/node_modules/sharp && i18nexus pull && next build",
+    "start": "i18nexus pull && next start",
+    "lint": "next lint",
+    "generate:translations": "i18next-resources-for-ts interface -i ./locales/en -o ./src/@types/resources.d.ts && npx eslint ./src/@types/resources.d.ts --fix",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "embla-carousel-auto-scroll": "^8.1.6",
+    "embla-carousel-autoplay": "^8.1.6",
+    "embla-carousel-react": "^8.1.6",
+    "html-react-parser": "^5.1.11",
+    "i18next": "^23.12.1",
+    "i18next-resources-to-backend": "^1.2.1",
+    "next": "^14.2.5",
+    "next-i18n-router": "^5.5.1",
+    "next-sitemap": "^4.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1",
+    "react-i18next": "^15.0.0",
+    "sharp": "^0.33.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.7.0",
+    "eslint-config-next": "^14.2.5",
+    "i18next-resources-for-ts": "^1.5.0",
+    "i18nexus-cli": "^3.4.0",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.3"
+  }
+}
